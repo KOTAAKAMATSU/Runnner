@@ -14,7 +14,7 @@ public class Emitter : MonoBehaviour
 	private float z = 3f;
 
 	private float yPlus = 0.62f;
-	private float zPlus = 0f;
+	private float zPlus = 0.24f;
 
 
 	
