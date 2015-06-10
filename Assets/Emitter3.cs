@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Emitter2 : MonoBehaviour
+public class Emitter3 : MonoBehaviour
 {
 	// Waveプレハブを格納する
 	public GameObject[] waves;
@@ -10,18 +10,18 @@ public class Emitter2 : MonoBehaviour
 	private int currentWave;
 	
 	private float x = 10f;
-	private float y = 0.62f;//床の高さ調整のための変数
-	private float z = 0f;
+	private float y = 1.24f;//床の高さ調整のための変数
+	private float z = -3f;
 	
-	private float yPlus = 0.62f;
-	private float zPlus = 0.24f;
-
+	private float yPlus = 1.25f;
+	private float zPlus = 6.05f;
+	
 	
 	IEnumerator Start ()
 	{
-
-		yield return new WaitForSeconds(1f);
-
+		
+		yield return new WaitForSeconds(2f);
+		
 		// Waveが存在しなければコルーチンを終了する
 		if (waves.Length == 0) {
 			yield break;

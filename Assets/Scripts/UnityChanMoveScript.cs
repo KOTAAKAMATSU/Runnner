@@ -25,7 +25,7 @@ public class UnityChanMoveScript : MonoBehaviour {
 		Vector3 m_pos = transform.localPosition;
 		m_pos.z -= 0.05f;
 		transform.localPosition = m_pos;  // 移動を更新
-		
+
 		
 	}
 }

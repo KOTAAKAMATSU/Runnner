@@ -65,7 +65,7 @@ namespace UnityChan
 			return;
 		}
 
-		//Show Instrustion Window
+		/*//Show Instrustion Window
 		void OnGUI()
 		{
 			if(showInstWindow){
@@ -75,9 +75,9 @@ namespace UnityChan
 				GUI.Label(new Rect(Screen.width -200, Screen.height - 40, 200, 30),"Wheel / 2 Fingers Swipe: Dolly");
 			}
 
-		}
+		}*/
 
-		void mouseEvent()
+		void mouseEvent()//視点変更等
 		{
 			float delta = Input.GetAxis("Mouse ScrollWheel");
 			if (delta != 0.0f)
@@ -114,17 +114,18 @@ namespace UnityChan
 				//Only "LMB Drag" is no action.
 			}
 			//Track
+			// マウス中ボタンをドラッグした場合(注視点の移動)
 			else if (Input.GetMouseButton((int)MouseButtonDown.MBD_MIDDLE))
 			{
 				if (diff.magnitude > Vector3.kEpsilon)
 					this.cameraTranslate(-diff / 100.0f);
 			}
 			//Tumble
-			else if (Input.GetMouseButton((int)MouseButtonDown.MBD_RIGHT))
+			/*else if (Input.GetMouseButton((int)MouseButtonDown.MBD_RIGHT))
 			{
 				if (diff.magnitude > Vector3.kEpsilon)
 					this.cameraRotate(new Vector3(diff.y, diff.x, 0.0f));
-			}
+			}*/
 				
 			this.oldPos = mousePos;	
 
